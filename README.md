@@ -19,8 +19,8 @@ By the end of this session, you'll have a ready-to-extend project template and h
 ### 2. Clone the repository
 
 ```bash
-git clone https://github.com/your-org/playwright-ai-masterclass.git
-cd playwright-ai-masterclass
+git clone https://github.com/razvanvancea/pw-iststc-workshop.git
+cd pw-iststc-workshop
 
 ```
 
