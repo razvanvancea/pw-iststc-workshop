@@ -10,7 +10,7 @@ By the end of this session, you'll have a ready-to-extend project template and h
 
 ### 1. Prerequisites
 
-- Node.js (recommended v18+)
+- Node.js (recommended v20+)
 - npm
 - Git
 - Google Chrome browser
