@@ -17,16 +17,11 @@ test.describe('Optional fundamentals test suite', () => {
    * */
 
   test('ex 4-7: the user should see an error message when logging in with invalid credentials @smoke', async ({
-    page,
+    headerPage,
+    loginPage,
   }) => {
-    await page.locator('[data-test="nav-sign-in"]').click();
-    await page.locator('[data-test="email"]').click();
-    await page.locator('[data-test="email"]').fill('invalidemail@gmail.com');
-    await page.locator('[data-test="password"]').click();
-    await page.locator('[data-test="password"]').fill('wrongpassword');
-    await page.locator('[data-test="login-submit"]').click();
-    await expect(page.locator('[data-test="login-error"]')).toContainText(
-      'Invalid email or password'
-    );
+    await headerPage.clickSignIn();
+    await loginPage.login('invalidemail@gmail.com', 'wrongpassword');
+    await expect(loginPage.loginError).toContainText('Invalid email or password');
   });
 });

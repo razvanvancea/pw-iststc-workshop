@@ -1,38 +1,37 @@
-import { expect, type Locator, type Page } from '@playwright/test';
-import { HeaderPage } from './header.page';
+import { type Locator, type Page } from '@playwright/test';
 
 export class LoginPage {
   readonly page: Page;
   readonly emailInput: Locator;
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
-  readonly loggedInUsername: Locator;
+  readonly loginError: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.emailInput = page.locator('[data-test="email"]');
     this.passwordInput = page.locator('[data-test="password"]');
     this.loginButton = page.locator('[data-test="login-submit"]');
-    this.loggedInUsername = page.locator('[data-test="nav-menu"]');
+    this.loginError = page.locator('[data-test="login-error"]');
   }
 
-  async login(email: string, password: string, expectedUsername: string = 'John Doe') {
-    const headerPage = new HeaderPage(this.page);
-    await headerPage.signInButton.click();
+  async fillEmail(email: string): Promise<this> {
     await this.emailInput.fill(email);
+    return this;
+  }
+
+  async fillPassword(password: string): Promise<this> {
     await this.passwordInput.fill(password);
+    return this;
+  }
+
+  async submitLogin(): Promise<void> {
     await this.loginButton.click();
-    await expect(this.loggedInUsername).toContainText(expectedUsername);
+  }
+
+  async login(email: string, password: string): Promise<void> {
+    await this.fillEmail(email);
+    await this.fillPassword(password);
+    await this.submitLogin();
   }
 }
-
-// await page.goto('https://practicesoftwaretesting.com/');
-// await page.locator('[data-test="nav-sign-in"]').click();
-// await page.locator('[data-test="email"]').click();
-// await page.locator('[data-test="email"]').fill('admin@practicesoftwaretesting.com');
-// await page.locator('[data-test="password"]').click();
-// await page.locator('[data-test="password"]').fill('welcome01');
-// await page.locator('[data-test="password"]').click();
-// await page.locator('[data-test="login-submit"]').click();
-// await expect(page.locator('[data-test="nav-menu"]')).toContainText('John Doe');
-// await page.locator('div').nth(3).click();

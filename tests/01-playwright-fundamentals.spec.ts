@@ -4,14 +4,16 @@ test.describe('Fundamentals test suite', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
   });
+
   /**
    *Exercise 1: debug the test below and make it pass
    */
-  test('ex 1: the user should be able to logout', async ({ loginPage, page }) => {
+  test('ex 1: the user should be able to logout', async ({ loginPage, headerPage }) => {
+    await headerPage.clickSignIn();
     await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
-    await page.locator('[data-test="nav-menu"]').click();
-    await page.locator('[data-test="nav-sign-out"]').click();
-    await expect(page.locator('[data-test="nav-sign-in"]')).toContainText('Sign in');
+    await expect(headerPage.userMenuText).toContainText('John Doe');
+    await headerPage.logout();
+    await expect(headerPage.signInButton).toContainText('Sign in');
   });
 
   /**
@@ -20,8 +22,13 @@ test.describe('Fundamentals test suite', () => {
    * Hint 2: standard user name is Jane Doe
    */
 
-  test('ex 2: the user should be able to login as standard user', async ({ loginPage }) => {
-    await loginPage.login('customer@practicesoftwaretesting.com', 'welcome01', 'Jane Doe');
+  test('ex 2: the user should be able to login as standard user', async ({
+    loginPage,
+    headerPage,
+  }) => {
+    await headerPage.clickSignIn();
+    await loginPage.login('customer@practicesoftwaretesting.com', 'welcome01');
+    await expect(headerPage.userMenuText).toContainText('Jane Doe');
   });
 
   /**
