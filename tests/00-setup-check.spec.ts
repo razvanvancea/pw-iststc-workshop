@@ -1,4 +1,4 @@
-import { test, expect } from '../base';
+import { test } from '../base';
 
 test.describe('Setup check: User authentication test suite', () => {
   test.beforeEach(async ({ page }) => {
