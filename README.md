@@ -36,7 +36,4 @@ npm install
 npm run test:check
 ```
 
-TO BE IGNORED: support file
-short link: https://tinyurl.com/paisupport
-or
-complete link: https://gist.github.com/razvanvancea/515766f8902d3249b89a0a04a71f238a
+Solutions link: https://gist.github.com/razvanvancea/123289a1aa30b911164dacf8d5a1db23
