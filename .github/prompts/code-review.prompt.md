@@ -3,7 +3,7 @@ name: review-branch-vs-main
 description: 'PR-style review: current branch vs main (TypeScript + Playwright standards, reliability, maintainability)'
 argument-hint: 'Optional: focus=<area> severity=<only blockers|full> (Example: focus=auth severity=full)'
 agent: 'pw-code-reviewer-specialist'
-model: ['Claude Sonnet 4.6', 'GPT-4o']
+model: ['Claude Sonnet 4.6', 'Claude Haiku 4.5']
 ---
 
 ## Task
