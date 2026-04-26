@@ -16,8 +16,17 @@ test.describe('Optional fundamentals test suite', () => {
    * OPTIONAL Exercise 7: run only the test that tries to login with invalid credentials, 10 times in a row, from CLI
    * */
 
-  //   test('ex 4-7: the user should see an error message when logging in with invalid credentials', async ({
-  //     page,
-  //   }) => {
-  //   });
+  test('ex 4-7: the user should see an error message when logging in with invalid credentials @smoke', async ({
+    page,
+  }) => {
+    await page.locator('[data-test="nav-sign-in"]').click();
+    await page.locator('[data-test="email"]').click();
+    await page.locator('[data-test="email"]').fill('invalidemail@gmail.com');
+    await page.locator('[data-test="password"]').click();
+    await page.locator('[data-test="password"]').fill('wrongpassword');
+    await page.locator('[data-test="login-submit"]').click();
+    await expect(page.locator('[data-test="login-error"]')).toContainText(
+      'Invalid email or password'
+    );
+  });
 });

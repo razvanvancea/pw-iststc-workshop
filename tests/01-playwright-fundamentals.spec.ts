@@ -7,11 +7,12 @@ test.describe('Fundamentals test suite', () => {
   /**
    *Exercise 1: debug the test below and make it pass
    */
-  //   test('ex 1: the user should be able to logout', async ({ loginPage, page }) => {
-  //     await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
-  //     await page.locator('[data-test="nav-sign-out"]').click();
-  //     await expect(page.locator('[data-test="nav-sign-in"]')).toContainText('Sign in');
-  //   });
+  test('ex 1: the user should be able to logout', async ({ loginPage, page }) => {
+    await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
+    await page.locator('[data-test="nav-menu"]').click();
+    await page.locator('[data-test="nav-sign-out"]').click();
+    await expect(page.locator('[data-test="nav-sign-in"]')).toContainText('Sign in');
+  });
 
   /**
    * Exercise 2: create a login test reusing POM implementation for standard user and verify that the username is correct after login
@@ -19,8 +20,9 @@ test.describe('Fundamentals test suite', () => {
    * Hint 2: standard user name is Jane Doe
    */
 
-  // test('ex 2: the user should be able to login as standard user', async ({ loginPage }) => {
-  // });
+  test('ex 2: the user should be able to login as standard user', async ({ loginPage }) => {
+    await loginPage.login('customer@practicesoftwaretesting.com', 'welcome01', 'Jane Doe');
+  });
 
   /**
    * Quality checkpoint:
