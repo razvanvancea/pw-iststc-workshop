@@ -1,0 +1,37 @@
+{
+  "name": "pw-ai-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:check": "npx cross-env URL=https://practicesoftwaretesting.com playwright test tests/00-setup-check.spec.ts",
+    "test:fundamentals": "playwright test tests/01-playwright-fundamentals.spec.ts",
+    "test:codegen": "playwright test tests/02-account-creation-codegen.spec.ts",
+    "test:optional": "playwright test tests/03-optional-fundamentals.spec.ts",
+    "test:headless": "npx cross-env URL=https://practicesoftwaretesting.com playwright test --workers=1",
+    "test:headed": "npx cross-env URL=https://practicesoftwaretesting.com playwright test --headed",
+    "test:debug": "npx cross-env URL=https://practicesoftwaretesting.com playwright test --headed --debug",
+    "show:report": "npx cross-env URL=https://practicesoftwaretesting.com playwright show-report",
+    "test:ui": "npx cross-env URL=https://practicesoftwaretesting.com playwright test --ui",
+    "test:smoke": "npx cross-env URL=https://practicesoftwaretesting.com playwright test -g '@smoke'",
+    "test:ten:times": "npx cross-env URL=https://practicesoftwaretesting.com playwright test -g '@wip' --repeat-each=10",
+    "test": "npx cross-env URL=https://practicesoftwaretesting.com playwright test",
+    "format": "npx prettier --write .",
+    "lint": "tsc --noEmit && eslint tests/**",
+    "generate": "npx playwright codegen https://practicesoftwaretesting.com"
+  },
+  "keywords": [],
+  "author": "RV",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.3",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
+  }
+}
