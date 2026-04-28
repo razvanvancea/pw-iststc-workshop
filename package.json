@@ -32,7 +32,6 @@
     "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
     "oxfmt": "^0.47.0",
-    "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
   }
