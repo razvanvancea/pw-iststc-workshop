@@ -10,5 +10,12 @@
   "endOfLine": "lf",
   "bracketSpacing": true,
   "sortPackageJson": false,
-  "ignorePatterns": ["node_modules", ".github", "specs"]
+  "ignorePatterns": [
+    "node_modules",
+    ".github",
+    "specs",
+    "blob-report",
+    "test-results",
+    "playwright-report"
+  ]
 }
