@@ -16,7 +16,8 @@
     "test:smoke": "npx cross-env URL=https://practicesoftwaretesting.com playwright test -g '@smoke'",
     "test:ten:times": "npx cross-env URL=https://practicesoftwaretesting.com playwright test -g '@wip' --repeat-each=10",
     "test": "npx cross-env URL=https://practicesoftwaretesting.com playwright test",
-    "format": "npx prettier --write .",
+    "format": "npx oxfmt",
+    "format:check": "npx oxfmt --check",
     "lint": "tsc --noEmit && eslint tests/**",
     "generate": "npx playwright codegen https://practicesoftwaretesting.com"
   },
@@ -30,6 +31,7 @@
     "@types/node": "^25.3.3",
     "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
+    "oxfmt": "^0.47.0",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
