@@ -143,7 +143,7 @@ To ensure everything works smoothly, you will need:
 
 Before joining the workshop, make sure:
 
-- ✅ You can run `npx playwright test` successfully
+- ✅ You can run `npm run test:check` successfully
 - ✅ VS Code is installed and working
 - ✅ Copilot Chat responds to prompts
 - ✅ You can open and navigate the project
