@@ -64,10 +64,10 @@ npm install
 npx playwright install
 ```
 
-**Step 3: Run the tests to verify everything works**
+**Step 3: Run a test to verify everything works**
 
 ```bash
-npx playwright test
+npm run test:check
 ```
 
 **Expected result:**
