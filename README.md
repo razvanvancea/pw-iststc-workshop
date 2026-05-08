@@ -115,7 +115,6 @@ This workshop includes hands-on exercises using AI agents powered by:
 - ✅ Copilot Chat is working
 - ✅ You have available monthly chat usage (free plan or paid subscription)
 
-
 ---
 
 ## ⚠️ Important Requirements
