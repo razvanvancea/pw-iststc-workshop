@@ -8,7 +8,7 @@ awesome-copilot: https://github.com/github/awesome-copilot
 Playwright agents: https://playwright.dev/docs/test-agents
 
 == Planner agent: test plan prompt ==
-use playwright MCP server to explore 'https://practicesoftwaretesting.com' in a chrome browser and create test plan using a plan.md file that should contain top 5 test scenarios
+use the Playwright MCP server to explore 'https://practicesoftwaretesting.com' in a chrome browser and create a test plan in plan.md with the top 5 test scenarios
 
 == Planner agent: injecting risk-based-prioritization skill ==
 
