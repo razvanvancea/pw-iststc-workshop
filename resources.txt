@@ -1,22 +1,12 @@
 workshop exercise solutions: 
 https://gist.github.com/razvanvancea/123289a1aa30b911164dacf8d5a1db23
 
+CLI command for generating project structure from a plain folder: npm init playwright@latest
+
 Playwright MCP Server: https://github.com/microsoft/playwright-mcp
 
 awesome-copilot: https://github.com/github/awesome-copilot
 
+awesome-copilot - playwright-ts-custom-instructions: https://github.com/github/awesome-copilot/blob/main/instructions/playwright-typescript.instructions.md
+
 Playwright agents: https://playwright.dev/docs/test-agents
-
-== Planner agent: test plan prompt ==
-use the Playwright MCP server to explore 'https://practicesoftwaretesting.com' in a chrome browser and create a test plan in plan.md with the top 5 test scenarios
-
-== Planner agent: injecting risk-based-prioritization skill ==
-
-## Risk-Based Planning
-
-Apply the `risk-based-prioritization` skill before saving the plan as .md file
-
-Prioritize scenarios as P0–P3 based on business impact and user risk.  
-Focus on critical flows first and make P0/P1 scenarios generator-ready for Playwright automation.
-
-If available, follow `.github/skills/risk-based-prioritization/SKILL.md` as mandatory planning policy.
