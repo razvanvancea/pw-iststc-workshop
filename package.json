@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "npx playwright test",
     "test:check": "npx playwright test tests/00-setup-check.spec.ts",
     "test:fundamentals": "playwright test tests/01-playwright-fundamentals.spec.ts",
     "test:codegen": "playwright test tests/02-account-creation-codegen.spec.ts",
@@ -15,7 +16,6 @@
     "test:ui": "npx playwright test --ui",
     "test:smoke": "npx playwright test -g '@smoke'",
     "test:ten:times": "npx playwright test -g '@wip' --repeat-each=10",
-    "test": "npx playwright test",
     "format": "npx oxfmt",
     "format:check": "npx oxfmt --check",
     "lint": "tsc --noEmit && eslint tests/**",
