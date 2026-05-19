@@ -61,7 +61,7 @@ npm install
 **Step 2: Install Playwright browsers**
 
 ```bash
-npx playwright install
+npx playwright install --with-deps
 ```
 
 **Step 3: Run a test to verify everything works**
